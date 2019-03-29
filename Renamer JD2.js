@@ -19,17 +19,16 @@
 //globals
 var mypackage = package; //get the package
 var links = mypackage.getDownloadLinks(); //get all the downloaded link
-var env = getEnviroment();
+var env = getEnvironment();
 var regex = /[0-9][0-9]/i;
 
 //name of the possible subdirectory
 var subdirSeason = "Season ";
 var subdirSpecials = "Specials";
 
-if(env.isWindows()) {   //Enviroment check
+if (env.isWindows()) { //Enviroment check
     var pathsep = "\\";
-}
-else {
+} else {
     var pathsep = "/";
 }
 
@@ -44,7 +43,7 @@ if (mypackage.isFinished()) {
             dir = dir.substring(0, dir.length - subdirSeason.length - 3); //get the parent directory
         }
     } else {
-        sea = "01";
+        nsea = "01";
     }
     dir = dir.substring(dir.lastIndexOf(pathsep) + 1); //remove the path and leave only the string with the name of the directory
     for (var k = 0; k < links.length; k++) { //for each download
@@ -53,4 +52,5 @@ if (mypackage.isFinished()) {
         var nep = regex.exec(name); //parse the download to extract the episode
         links[k].setName(dir + " - s" + nsea + "e" + nep + type); //change the download name in "name of the folder - sXXeYY.type"
     }
+    mypackage.remove();
 }
