@@ -1,5 +1,5 @@
 /*
-  Author: BroHPotato
+  Author: Giuseppe Vito Bitetti AKA BroHPotato
   Email:giuseppevitobitetti@libero.it
 
   Event script : RenameFile
