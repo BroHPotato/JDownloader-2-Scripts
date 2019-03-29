@@ -26,7 +26,7 @@ var regex = /[0-9][0-9]/i;
 var subdirSeason = "Season ";
 var subdirSpecials = "Specials";
 
-if (env.isWindows()) { //Enviroment check
+if (env.isWindows()) { //environment check
     var pathsep = "\\";
 } else {
     var pathsep = "/";
@@ -52,5 +52,5 @@ if (mypackage.isFinished()) {
         var nep = regex.exec(name); //parse the download to extract the episode
         links[k].setName(dir + " - s" + nsea + "e" + nep + type); //change the download name in "name of the folder - sXXeYY.type"
     }
-    mypackage.remove();
+    mypackage.remove(); //remove the package
 }
