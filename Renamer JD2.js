@@ -14,6 +14,9 @@
 
   Warnings:
     Adjust the regular expression(see regex) based on your typical download file name.
+    
+    Tested on Windows 10 Pro N 1809
+    Tested on Raspberry 3B+ Linux raspberrypi 4.14.98-v7+ armv71
 */
 
 //globals
