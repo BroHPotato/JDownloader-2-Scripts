@@ -19,7 +19,7 @@
 //globals
 var mypackage = package; //get the package
 var links = mypackage.getDownloadLinks(); //get all the downloaded link
-var env = getEnviroment();
+var env = getEnvironment();
 var firstregex = /(e|ep)(-|_| )?[0-9][0-9]/i; //ensure that the "ep" OR "e" string
                                               //followed by the number of the episode
                                               //is present
